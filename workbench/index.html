@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>需求工作台</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="progress" id="progress" hidden></div>
+<div class="layout">
+  <aside class="side" aria-label="导航">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">W</div>
+      <div><div class="brand-name">需求工作台</div><div class="brand-sub" id="who">加载中…</div></div>
+    </div>
+    <nav id="nav"></nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <div class="today" id="today"></div>
+        <div class="sub" id="stamp">正在读取数据…</div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="btn-config" title="活跃分支天数等页面配置">配置</button>
+        <button class="btn" id="btn-new" title="选择仓库和分支，组合成一条需求">新建需求</button>
+        <button class="btn" id="btn-full" title="查询任务系统，并对每个仓库执行 git fetch，约 10~20 秒">刷新并同步仓库</button>
+        <button class="btn primary" id="btn-quick" title="只重新查询任务系统，约 2 秒">刷新</button>
+      </div>
+    </header>
+    <main id="app" aria-live="polite">
+      <div class="empty">正在加载需求数据…</div>
+    </main>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+<script src="/static/core.js"></script>
+<script src="/static/tip.js"></script>
+<script src="/static/charts.js"></script>
+<script src="/static/gantt.js"></script>
+<script src="/static/views.js"></script>
+<script src="/static/drawer.js"></script>
+<script src="/static/local.js"></script>
+<script src="/static/detail.js"></script>
+</body>
+</html>

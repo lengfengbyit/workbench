@@ -1,0 +1,64 @@
+{
+    "requirements": {
+        "my-org/api#12": {
+            "track": true,
+            "nodes": [
+                "my-org/api",
+                "my-org/web"
+            ],
+            "edges": [
+                [
+                    "my-org/web",
+                    "my-org/api",
+                    "checkout calls the new /orders endpoint"
+                ]
+            ],
+            "note": "Ship api first, then web.",
+            "info": {
+                "summary": "Rebuild the checkout flow so orders can be edited before payment.",
+                "goals": [
+                    "Edit an order before paying",
+                    "Keep the old flow behind a flag"
+                ],
+                "scope": [
+                    {
+                        "name": "Order edit endpoint",
+                        "owner": "backend team",
+                        "ours": true,
+                        "desc": "PATCH /orders/{id}",
+                        "repos": [
+                            "my-org/api"
+                        ]
+                    },
+                    {
+                        "name": "Payment provider upgrade",
+                        "owner": "payments team",
+                        "ours": false,
+                        "desc": "Out of scope here"
+                    }
+                ],
+                "milestones": [
+                    {
+                        "name": "Code complete",
+                        "date": "2026-12-01"
+                    }
+                ],
+                "risks": [
+                    "Waiting on the final design"
+                ],
+                "source": "Design brief",
+                "updated": "2026-11-17"
+            },
+            "docs": [
+                {
+                    "type": "prd",
+                    "title": "Checkout redesign PRD",
+                    "url": "https://example.com/prd",
+                    "note": "v3",
+                    "added": "2026-11-17"
+                }
+            ]
+        }
+    },
+    "archived": []
+}

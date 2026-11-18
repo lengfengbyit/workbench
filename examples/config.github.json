@@ -1,0 +1,27 @@
+{
+    "provider": "github",
+    "workspace": "~/code",
+    "host": "127.0.0.1",
+    "port": 8765,
+    "github": {
+        "stages": [
+            "Todo",
+            "In Progress",
+            "In Review",
+            "Done"
+        ],
+        "closed_stage": "Done",
+        "status_field": "Status",
+        "date_fields": {
+            "Start date": "devStart",
+            "End date": "devEnd",
+            "Target date": "release"
+        },
+        "iteration_field": "Iteration",
+        "workspace_only": true,
+        "search": "-label:wontfix"
+    },
+    "repo_paths": {
+        "my-org/legacy-service": "~/old/legacy"
+    }
+}
